@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAUZA KAIZAKU SETIAWAN — PORTFOLIO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- STICKY MINIMAL NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="brand-mark" data-magnify>KAI.</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about" data-i18n="nav_about" data-magnify>ABOUT</a>
+        <a href="#education" data-i18n="nav_education" data-magnify>EDUCATION</a>
+        <a href="#projects" data-i18n="nav_projects" data-magnify>PROJECTS</a>
+        <a href="#credentials" data-i18n="nav_credentials" data-magnify>CREDENTIALS</a>
+        <a href="#contact" data-i18n="nav_contact" data-magnify>CONTACT</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="id">ID</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="container">
+        <p class="eyebrow" data-i18n="hero_role" data-magnify>UI/UX DESIGNER &amp; PRODUCT IDEATOR</p>
+        <h1 class="hero-title" data-magnify>
+          FAUZA<br />
+          KAIZAKU<br />
+          SETIAWAN
+        </h1>
+        <p class="hero-sub" data-i18n="hero_sub" data-magnify>
+          INFORMATICS ENGINEERING STUDENT AT TELKOM UNIVERSITY PURWOKERTO. STRUCTURING IDEAS INTO CLEAR INTERFACES AND USABLE DIGITAL PRODUCTS.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-dark" data-i18n="hero_cta_projects">VIEW PROJECTS</a>
+          <a href="#contact" class="btn btn-light" data-i18n="hero_cta_contact">GET IN TOUCH</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & CLEAN TOOLKIT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="about_title" data-magnify>ABOUT</h2>
+        <div class="about-grid">
+          <div class="concrete-slab about-copy">
+            <p class="lead-text" data-i18n="about_lead" data-magnify>
+              I ORGANIZE CONCEPTS, DEFINE USER FLOWS, AND SHAPE CLEAN INTERFACES BEFORE HEAVY CODE BEGINS.
+            </p>
+            <p class="body-text" data-i18n="about_body" data-magnify>
+              Focused on Human-Computer Interaction and practical user experience. Beyond software, I bring detail-oriented precision from competing in an official hotel pastry competition and practical communication skills from peer English and interview coaching backed by an ETS TOEIC 905 score.
+            </p>
+
+            <!-- SIMPLIFIED, SCANNABLE TOOLKIT -->
+            <div class="toolkit-groups">
+              <div class="toolkit-row">
+                <span class="toolkit-label">DESIGN</span>
+                <span class="toolkit-items" data-magnify>Figma, Canva, UI Architecture, Prototyping</span>
+              </div>
+              <div class="toolkit-row">
+                <span class="toolkit-label">FRONTEND &amp; WEB</span>
+                <span class="toolkit-items" data-magnify>HTML, CSS, Laravel, WordPress</span>
+              </div>
+              <div class="toolkit-row">
+                <span class="toolkit-label">INTERACTIVE &amp; DATA</span>
+                <span class="toolkit-items" data-magnify>Unity 2D, PHP, Python, MariaDB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- FRAMED PORTRAIT SLOT (MINIMAL GRAY PLACEHOLDER) -->
+          <div class="concrete-slab portrait-frame">
+            <div class="missing-file-box" id="portraitBox">
+              <svg class="missing-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect x="6" y="8" width="36" height="32" rx="6" stroke="currentColor" stroke-width="2.5" />
+                <circle cx="17" cy="19" r="3" fill="currentColor" />
+                <path d="M9 35L19 25L26 32L32 26L39 35" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="missing-label">PORTRAIT_PLACEHOLDER.JPG</span>
+              <span class="missing-hint" data-i18n="portrait_hint">ADD PHOTO IN SCRIPT.JS CONFIG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & INTERACTIVE MAP -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="edu_title" data-magnify>EDUCATION &amp; TRACK</h2>
+        <div class="edu-layout">
+          <div class="edu-list" id="eduList"></div>
+
+          <div class="concrete-slab map-panel">
+            <div class="map-header">
+              <div>
+                <p class="map-kicker" id="mapCity">PURWOKERTO, CENTRAL JAVA</p>
+                <h3 class="map-place" id="mapTitle" data-magnify>TELKOM UNIVERSITY PURWOKERTO</h3>
+              </div>
+              <a id="mapExternalLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-light btn-sm" data-i18n="open_maps">OPEN MAPS</a>
+            </div>
+            <div class="map-frame-wrap">
+              <iframe
+                id="mapIframe"
+                title="Location map preview"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS (IMAGELESS + PLAYABLE GRAVITY RUNNER) -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="projects_title" data-magnify>PROJECTS</h2>
+
+        <div class="projects-stack">
+          <!-- PROJECT 1: ISIM (IMAGELESS ARCHITECTURAL SLAB) -->
+          <article class="concrete-slab project-card" data-project="isim">
+            <div class="project-meta">
+              <span class="tag">ENTERPRISE WEB</span>
+              <span class="tag">TELKOM REGIONAL IV SEMARANG</span>
+            </div>
+            <h3 class="project-title" data-magnify>ISIM — INVENTORY MANAGEMENT SYSTEM</h3>
+            <p class="body-text" data-i18n="proj_isim_desc" data-magnify>
+              Internal inventory management web application built during my internship for the Networking Division staff at PT. Telkom Indonesia Regional IV Semarang. Handles incoming/outgoing stock tracking, master item records, category controls, and real-time summary charts.
+            </p>
+            <div class="project-specs">
+              <div class="spec-cell">
+                <span class="spec-label">STACK</span>
+                <span class="spec-val">Laravel, PHP, Python, MariaDB</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">SECURITY</span>
+                <span class="spec-val">CAPTCHA, Email Verification, Role Access</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">STATUS</span>
+                <span class="spec-val">Production Internal Server (Sangat Kompeten)</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-light btn-sm project-detail-btn" data-open-project="isim" data-i18n="read_brief">PROJECT BRIEF</button>
+          </article>
+
+          <!-- PROJECT 2: E-COMMERCE (IMAGELESS ARCHITECTURAL SLAB) -->
+          <article class="concrete-slab project-card" data-project="ecommerce">
+            <div class="project-meta">
+              <span class="tag">E-COMMERCE</span>
+              <span class="tag">WEB ARCHITECTURE</span>
+            </div>
+            <h3 class="project-title" data-magnify>APPAREL E-COMMERCE PLATFORM</h3>
+            <p class="body-text" data-i18n="proj_ecom_desc" data-magnify>
+              Minimalist retail storefront inspired by modern clean apparel brands. Built with WordPress and custom front-end code, integrating real Indonesian payment gateways and live order shipment tracking.
+            </p>
+            <div class="project-specs">
+              <div class="spec-cell">
+                <span class="spec-label">PLATFORM</span>
+                <span class="spec-val">WordPress + Custom Front-End</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">PAYMENTS</span>
+                <span class="spec-val">Midtrans, Xendit, Bank Transfer</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-label">FEATURE</span>
+                <span class="spec-val">Live Shipment Tracking Flow</span>
+              </div>
+            </div>
+            <button type="button" class="btn btn-light btn-sm project-detail-btn" data-open-project="ecommerce" data-i18n="read_brief">PROJECT BRIEF</button>
+          </article>
+
+          <!-- PROJECT 3: GEOMETRY-STYLE GRAVITY FLIP RUNNER -->
+          <article class="concrete-slab project-card game-card">
+            <div class="project-meta">
+              <span class="tag">UNITY 2D PROTOTYPE</span>
+              <span class="tag">INTERACTIVE DEMO</span>
+            </div>
+            <h3 class="project-title" data-magnify>GRAVITY FLIP RUNNER</h3>
+            <p class="body-text" data-i18n="proj_game_desc" data-magnify>
+              Originally built as a lightweight 2D Unity assignment. Play the browser edition below: press SPACE or CLICK to invert gravity and snap between floor and ceiling. Dodge both top and bottom spikes, and avoid falling through open gaps.
+            </p>
+
+            <div class="game-shell">
+              <div class="game-hud">
+                <span>STAGE <strong id="gameStage">01</strong></span>
+                <span>DISTANCE <strong id="gameScore">000</strong></span>
+                <span>BEST <strong id="gameBest">000</strong></span>
+                <button type="button" class="btn btn-dark btn-xs" id="gameResetBtn">RESTART</button>
+              </div>
+              <div class="canvas-wrap">
+                <canvas id="gravityCanvas" width="900" height="300"></canvas>
+                <div class="game-overlay" id="gameOverlay">
+                  <p class="overlay-title" id="overlayTitle">PRESS SPACE OR CLICK TO FLIP GRAVITY</p>
+                  <p class="overlay-sub" id="overlaySub">STICK TO CEILING &amp; FLOOR — AVOID SPIKES AND VOID GAPS</p>
+                  <button type="button" class="btn btn-dark btn-sm" id="gameStartBtn">PLAY</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS: LEFT THICK 3D ROTATING SLAB + RIGHT DESCRIPTION -->
+    <section id="credentials" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="cred_title" data-magnify>CREDENTIALS</h2>
+
+        <div class="cred-layout">
+          <!-- LEFT: THICK 3D CARD STAGE + CLEAR CONTROLS BELOW -->
+          <div class="cred-stage-col">
+            <div class="card3d-viewport" id="cardViewport">
+              <div class="card3d-slab" id="cardSlab">
+                <!-- FRONT FACE -->
+                <div class="slab-face slab-front">
+                  <div class="slab-top-bar">
+                    <span class="slab-index" id="cardIndex">01 / 05</span>
+                    <span class="slab-year" id="cardYear">2025</span>
+                  </div>
+                  <div class="missing-file-box card-placeholder" id="cardImageBox">
+                    <svg class="missing-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                      <rect x="6" y="8" width="36" height="32" rx="6" stroke="currentColor" stroke-width="2.5" />
+                      <circle cx="17" cy="19" r="3" fill="currentColor" />
+                      <path d="M9 35L19 25L26 32L32 26L39 35" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span class="missing-label" id="cardFilename">CERTIFICATE_01.JPG</span>
+                  </div>
+                  <div class="slab-bottom">
+                    <p class="slab-issuer" id="cardIssuer">PT. TELKOM INDONESIA REGIONAL IV</p>
+                    <h3 class="slab-title" id="cardTitle">INDUSTRIAL INTERNSHIP</h3>
+                  </div>
+                </div>
+
+                <!-- BACK FACE (VISIBLE DURING 360 SPIN) -->
+                <div class="slab-face slab-back">
+                  <span class="back-stamp">VERIFIED CREDENTIAL</span>
+                  <span class="back-sub" id="cardBackCode">REF — 01</span>
+                </div>
+
+                <!-- THICK 3D EXTRUDED EDGES -->
+                <div class="slab-edge slab-edge-right"></div>
+                <div class="slab-edge slab-edge-left"></div>
+                <div class="slab-edge slab-edge-top"></div>
+                <div class="slab-edge slab-edge-bottom"></div>
+              </div>
+            </div>
+
+            <!-- CLEAR, UNOBSTRUCTED NAVIGATION ARROWS BELOW CARD -->
+            <div class="cred-controls">
+              <button type="button" class="arrow-btn" id="prevCredBtn" aria-label="Previous credential">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 18L9 12L15 6" />
+                </svg>
+              </button>
+              <span class="cred-counter" id="credCounter">01 OF 05</span>
+              <button type="button" class="arrow-btn" id="nextCredBtn" aria-label="Next credential">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18L15 12L9 6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT: DYNAMIC DESCRIPTION PANEL -->
+          <div class="concrete-slab cred-detail-panel" id="credDetailPanel">
+            <p class="detail-issuer" id="detailIssuer">PT. TELKOM INDONESIA REGIONAL IV</p>
+            <h3 class="detail-title" id="detailTitle" data-magnify>INDUSTRIAL INTERNSHIP — SANGAT KOMPETEN</h3>
+            <p class="detail-meta" id="detailMeta">SEMARANG, INDONESIA • 2025</p>
+            <div class="detail-divider"></div>
+            <p class="body-text detail-desc" id="detailDesc" data-magnify>
+              Placeholder summary describing the responsibilities, collaboration, and final evaluation achieved for this credential. Replace this draft paragraph inside the CREDENTIALS array in script.js with your finalized wording.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PROJECT BRIEF OVERLAY MODAL -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true">
+    <div class="modal-drawer" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-top">
+        <span class="tag" id="modalTag">PROJECT BRIEF</span>
+        <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Close">CLOSE</button>
+      </div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="body-text" id="modalBody"></p>
+      <ul class="modal-points" id="modalPoints"></ul>
+    </div>
+  </div>
+
+  <!-- FOOTER: NAME & SEMESTER AT TOP, NO BIO, TRANSLUCENT SOCIAL ICONS -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer-head">
+        <h2 class="footer-name" data-magnify>FAUZA KAIZAKU SETIAWAN</h2>
+        <p class="footer-sub" data-i18n="footer_semester" data-magnify>5TH SEMESTER INFORMATICS ENGINEERING — TELKOM UNIVERSITY PURWOKERTO</p>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 class="footer-heading" data-i18n="footer_nav">NAVIGATION</h3>
+          <ul class="footer-list">
+            <li><a href="#about" data-i18n="nav_about">ABOUT</a></li>
+            <li><a href="#education" data-i18n="nav_education">EDUCATION</a></li>
+            <li><a href="#projects" data-i18n="nav_projects">PROJECTS</a></li>
+            <li><a href="#credentials" data-i18n="nav_credentials">CREDENTIALS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading" data-i18n="footer_contact">DIRECT CONTACT</h3>
+          <ul class="footer-list">
+            <li><a id="emailPrimaryLink" href="mailto:fauzakaizakusetiawan@student.telkomuniversity.ac.id">fauzakaizakusetiawan@student.telkomuniversity.ac.id</a></li>
+            <li><a id="emailSecondaryLink" href="mailto:kaizaku.telkomuniv@gmail.com">kaizaku.telkomuniv@gmail.com</a></li>
+            <li><a id="whatsappLink" href="https://wa.me/6280000000000" target="_blank" rel="noopener noreferrer">WHATSAPP (REPLACE NUMBER)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">SOCIALS</h3>
+          <div class="social-icon-row">
+            <a id="githubLink" href="https://github.com/kaimiongmiong012" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.58 2 12.24c0 4.52 2.87 8.36 6.84 9.71.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.72 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.46.1 2.72.64.72 1.03 1.64 1.03 2.76 0 3.95-2.34 4.82-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.25 10.25 0 0 0 22 12.24C22 6.58 17.52 2 12 2Z" />
+              </svg>
+            </a>
+            <a id="linkedinLink" href="https://www.linkedin.com/in/fauza-kaizaku-439338327" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M5.37 3.5a1.88 1.88 0 1 1 0 3.76 1.88 1.88 0 0 1 0-3.76ZM3.75 8.75h3.25V20.5H3.75V8.75Zm5.5 0h3.11v1.61h.04c.43-.82 1.5-1.69 3.09-1.69 3.31 0 3.92 2.18 3.92 5.01v6.82h-3.25v-6.05c0-1.44-.03-3.3-2.01-3.3-2.01 0-2.32 1.57-2.32 3.19v6.16H9.25V8.75Z" />
+              </svg>
+            </a>
+            <a id="instagramLink" href="https://www.instagram.com/kaieaych" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>PURWOKERTO, INDONESIA</span>
+        <span>&copy; 2026 FAUZA KAIZAKU SETIAWAN</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
